@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Recupera il nome salvato da localStorage
+  // Recupero da localStorage
   const userName = localStorage.getItem("username");
   if (userName) {
     document.getElementById("userName").innerText = "User: " + userName;
   }
 
-  // Imposta il contatore
+  // contatore
   let counter = sessionStorage.getItem("counter");
   if (!counter) {
     counter = 0;
