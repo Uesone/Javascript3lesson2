@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Recupero da localStorage
   const userName = localStorage.getItem("username");
   if (userName) {
     document.getElementById("userName").innerText = "User: " + userName;
   }
 
-  // contatore
   let counter = sessionStorage.getItem("counter");
   if (!counter) {
     counter = 0;
@@ -21,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("counter").innerText = counter;
   }, 1000);
 
-  // Gestione dei pulsanti
   document.getElementById("saveButton").addEventListener("click", function () {
     const username = document.getElementById("username").value;
     localStorage.setItem("username", username);
